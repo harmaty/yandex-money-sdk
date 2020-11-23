@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://money.yandex.ru/api/request-payment
+    body:
+      encoding: UTF-8
+      string: pattern_id=p2p&to=410011161616877&test_payment=true&test_result=success
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 10 Nov 2014 19:24:28 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '148'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=120
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"status":"refused","error":"illegal_params","error_description":"At
+        least one parameter of amount or amount_due is expected","test_payment":"true"}'
+    http_version: 
+  recorded_at: Mon, 10 Nov 2014 19:24:30 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sp-money.yandex.ru/oauth/token
+    body:
+      encoding: UTF-8
+      string: code=SOME%20CODE&client_id=<CLIENT_ID>&grant_type=authorization_code&redirect_uri=http%3A%2F%2F127.0.0.1%3A4567%2Fredirect
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 10 Nov 2014 19:24:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=120
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - max-age=0, proxy-revalidate
+      Expires:
+      - Mon, 10 Nov 2014 19:24:27 GMT
+      Set-Cookie:
+      - yandexuid=4758806711415647467; domain=.yandex.ru; path=/; expires=Tue, 19
+        Jan 2038 03:14:07 GMT
+      - ys=ymrefl.D9768DB1FD130B6F; domain=.yandex.ru; path=/
+    body:
+      encoding: UTF-8
+      string: '{"error":"invalid_grant"}'
+    http_version: 
+  recorded_at: Mon, 10 Nov 2014 19:24:29 GMT
+recorded_with: VCR 2.9.3

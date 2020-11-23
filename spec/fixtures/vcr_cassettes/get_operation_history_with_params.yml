@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://money.yandex.ru/api/operation-history
+    body:
+      encoding: UTF-8
+      string: records=1
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 10 Nov 2014 19:24:26 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '254'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=120
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJuZXh0X3JlY29yZCI6IjEiLCJvcGVyYXRpb25zIjpbeyJwYXR0ZXJuX2lk
+        IjoiMzM3Iiwib3BlcmF0aW9uX2lkIjoiNDY1OTM5NDIzNjM3MTEwMDE4Iiwi
+        dGl0bGUiOiLQnNC10LPQsNCk0L7QvSAo0KDQvtGB0YHQuNGPKTogKzc5MjEg
+        KioqIDAwNTIiLCJhbW91bnQiOjIuMDAsImRpcmVjdGlvbiI6Im91dCIsImRh
+        dGV0aW1lIjoiMjAxNC0xMC0wNlQxOTozNzoyM1oiLCJzdGF0dXMiOiJzdWNj
+        ZXNzIiwidHlwZSI6InBheW1lbnQtc2hvcCJ9XX0=
+    http_version: 
+  recorded_at: Mon, 10 Nov 2014 19:24:28 GMT
+recorded_with: VCR 2.9.3
