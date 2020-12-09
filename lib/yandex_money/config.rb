@@ -20,7 +20,7 @@ module YandexMoney
 
     def initialize
       @money_url = "https://yoomoney.ru"
-      @sp_money_url = "https://sp-money.yandex.ru"
+      @sp_money_url = "https://yoomoney.ru"
     end
   end
 end
